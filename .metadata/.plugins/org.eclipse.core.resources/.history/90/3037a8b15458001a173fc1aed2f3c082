@@ -1,0 +1,62 @@
+package com.luv2code.java_configureration;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+
+public class SwimCoach implements ICoach {
+
+	//feild level injection from  properties file
+	
+	@Value("$(foo.email)")
+	private String email;
+
+	@Value("$(foo.team)")
+	private String team;
+	
+	
+	IFortuneService fortuneService;
+
+	/*@Autowired
+	public SwimCoach(@Value("$(foo.email)") String email ) {
+	this.email=email;	
+	System.out.println(email);
+	}*/
+	
+	public SwimCoach(IFortuneService thefortuneService) {
+		this.fortuneService = thefortuneService;
+	}
+
+	public String getDailyWorkout() {
+		return "SwimCoach :: getDailyWorkout()";
+	}
+
+	public String getDailyFortune() {
+		return "SwimCoach :: getDailyFortune()" + fortuneService.getFortune();
+	}
+
+	
+
+	//getter for propeties feild injected value
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public String getTeam() {
+		return team;
+	}
+	
+	@PostConstruct
+	public void init() {
+		System.out.println(email);
+	}
+
+	
+	
+
+	
+	
+	
+}

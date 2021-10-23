@@ -1,0 +1,25 @@
+package com.luv2code.annotation_demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+//spring container autometically register the bean 
+@Component("mytennisCoach")
+public class TennisCoach implements ICoach {
+
+	private IFortuneService iFortuneService;
+
+	@Autowired
+	public TennisCoach(IFortuneService iFortuneService) {
+		this.iFortuneService = iFortuneService;
+	}
+
+	public String getDailyWorkout() {
+		return "TennisCoach : getDailyWorkout()";
+	}
+
+	public String getDailyFortune() {
+		return "TennisCoach:  " +iFortuneService.getFortune();
+	}
+
+}

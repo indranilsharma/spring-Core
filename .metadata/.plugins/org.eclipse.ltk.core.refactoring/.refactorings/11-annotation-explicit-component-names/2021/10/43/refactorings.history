@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy source folder &apos;resources&apos; to &apos;12-annotation-constructor-injection&apos;&#x0D;&#x0A;- Original project: &apos;11-annotation-explicit-component-names&apos;&#x0D;&#x0A;- Destination element: &apos;12-annotation-constructor-injection&apos;&#x0D;&#x0A;- Original element: &apos;11-annotation-explicit-component-names/src/main/resources&apos;" description="Copy source folder" element1="/src\/main\/resources=/maven.pomderived=/true=/" flags="6" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyRoots" roots="1" stamp="1634913501823" target="/12-annotation-constructor-injection" version="1.0"/>
+</session>

@@ -1,0 +1,36 @@
+package com.luv2code.java_configureration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+
+
+@Configuration
+@ComponentScan("com.luv2code.java_configureration") 
+//@ComponentScan comented because we manually define our bean at @bean  
+
+//it will take feild level injection from properties file 
+//@PropertySource("classpath:sports.properties") 
+
+public class SportsConfig {
+
+	
+	@Bean
+    public static PropertySourcesPlaceholderConfigurer
+                    propertySourcesPlaceHolderConfigurer() {
+        
+        return new PropertySourcesPlaceholderConfigurer();
+    }
+	
+	@Bean
+	public IFortuneService sadFortuneService() {
+		return new SadFortuneService();
+	}
+
+	// define bean and inject dependecy 
+	@Bean
+	public ICoach swimCoach() {
+		return new SwimCoach(sadFortuneService());
+	}
+
+}

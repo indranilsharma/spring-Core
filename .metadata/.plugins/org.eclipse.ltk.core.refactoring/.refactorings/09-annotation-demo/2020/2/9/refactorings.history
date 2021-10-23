@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;annotation-demo/src/main/java/com/luv2code/annotation_constructor_injection&apos; to &apos;annotation_demo&apos;" description="Rename resource &apos;annotation_constructor_injection&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/java/com/luv2code/annotation_constructor_injection" name="annotation_demo" stamp="1582616273020" updateReferences="true"/>
+</session>

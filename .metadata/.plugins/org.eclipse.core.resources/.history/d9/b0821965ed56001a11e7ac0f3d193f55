@@ -1,0 +1,10 @@
+package com.luv2code.practiceActivity1_ioc_xml;
+
+public class Cricket implements Play {
+
+	public String getTypeOfPlay() {
+		return "This is one of hte popular sport in india";
+
+	}
+
+}

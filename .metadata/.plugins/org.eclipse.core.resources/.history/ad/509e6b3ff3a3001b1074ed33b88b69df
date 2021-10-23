@@ -1,0 +1,44 @@
+package com.luv2code.annotation_setter_injection;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class TennisCoach implements ICoach {
+
+	private IFortuneService fortuneService;
+	
+	
+	public TennisCoach() {
+		System.out.println(" TennisCoach: inside default constructor");
+	}
+	
+
+	public IFortuneService getFortuneService() {
+		return fortuneService;
+	}
+
+	@Autowired
+	public void setFortuneService(IFortuneService fortuneService) {
+		System.out.println("TennisCoach: inside setter injection");
+		this.fortuneService = fortuneService;
+	}
+
+	//implemented method from icoach
+	@Override
+	public String getDailyWorkout() {
+		return "TennisCoach :getDailyWorkout() ";
+	}
+
+	@Override
+	public String getDailyFortune() {
+		return "TennisCoach : getDailyFortune() ";
+	}
+
+	@Autowired // inject the method to the perticular object
+	public void methodInjection(IFortuneService thefortuneService) {
+		System.out.println("TennisCoach: methodInjection");
+		this.fortuneService=thefortuneService;
+	}
+	
+}
