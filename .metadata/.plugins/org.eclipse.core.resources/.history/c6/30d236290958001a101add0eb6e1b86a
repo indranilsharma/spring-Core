@@ -1,7 +1,0 @@
-package com.luv2code.java_configureration;
-
-public class App {
-
-	public static void main(String[] args) {
-	}
-}

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy package &apos;com.luv2code&apos; to &apos;03-IOC-XML-Config/src&apos;&#x0D;&#x0A;- Original project: &apos;02-Demo&apos;&#x0D;&#x0A;- Destination element: &apos;03-IOC-XML-Config/src&apos;&#x0D;&#x0A;- Original element: &apos;02-Demo/src/com.luv2code&apos;" description="Copy package" destination="=03-IOC-XML-Config/src" element1="/src&lt;com.luv2code" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1619025873616" version="1.0"/>
-</session>
